@@ -14,7 +14,7 @@ let package = Package(
     targets: [
         .target(
             name: "ads-aggregator",
-            dependencies: ["GoogleMobileAds", "MoPubAdapter", "MoPubSDK", "OMSDK_Mopub", "OpenWrapHandlerDFP", "OpenWrapSDK"]),
+            dependencies: ["GoogleMobileAds", "MoPubAdapter", "MoPubSDK", "OMSDK_Mopub", "OpenWrapHandlerDFP", "OpenWrapSDK", "InMobiAdapter", "InMobiSDK"]),
         .binaryTarget(
             name: "GoogleMobileAds",
             path: "artifacts/GoogleMobileAds.xcframework"
@@ -38,6 +38,14 @@ let package = Package(
         .binaryTarget(
             name: "OpenWrapSDK",
             path: "artifacts/OpenWrapSDK.xcframework"
+        ),
+        .binaryTarget(
+            name: "InMobiAdapter",
+            path: "artifacts/InMobiAdapter.xcframework"
+        ),
+        .binaryTarget(
+            name: "InMobiSDK",
+            path: "artifacts/InMobiSDK.xcframework"
         ),
         .testTarget(
             name: "ads-aggregatorTests",
